@@ -5,7 +5,7 @@
 #include "Team.hpp"
 #include "doctest.h"
 using namespace std;
-using namespace ball;
+using namespace ariel;
 
 
 TEST_CASE("CHECK VALID"){

@@ -4,7 +4,7 @@
 
 using namespace std;
 
-namespace ball{
+namespace ariel{
 class Game{
 
 private:

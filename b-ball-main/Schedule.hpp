@@ -5,7 +5,7 @@
 #include "Game.hpp"
 using namespace std;
 
-namespace ball{
+namespace ariel{
     class Schedule{
         private:
             vector<Team*> teams;

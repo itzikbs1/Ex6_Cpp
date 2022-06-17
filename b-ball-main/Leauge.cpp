@@ -4,7 +4,7 @@
 #include "string"
 
 using namespace std;
-using namespace ball;
+using namespace ariel;
 
 
 Leauge::Leauge(vector<Team*> leauge){

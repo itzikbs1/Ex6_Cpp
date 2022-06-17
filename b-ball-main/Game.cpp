@@ -2,7 +2,7 @@
 #include "Game.hpp"
 #include <cmath>
 using namespace std;
-using namespace ball;
+using namespace ariel;
 Game::Game(){
     this->home_team;
     this->out_team;
@@ -26,6 +26,18 @@ void Game::play_game(){
     if (this->out_team->get_unique() > 0.5)
     {
        basic_solution += bonus_points;
+    }
+    if(home_team->get_points() >= out_team->get_points()){
+        if(home_solution >= basic_solution){
+        home_team->set_seq_of_vic(1);
+        out_team->set_seq_of_loss(1);
+        }
+    }
+    if(out_team->get_points() >= home_team->get_points()){
+        if(basic_solution >= home_solution){
+        out_team->set_seq_of_vic(1);
+        home_team->set_seq_of_loss(1);
+        }
     }
 }    
 string Game::get_winner(){

@@ -3,7 +3,7 @@
 #include <vector>
 using namespace std;
 
-namespace ball{
+namespace ariel{
 class Leauge{
 
 private:
