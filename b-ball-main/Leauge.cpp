@@ -22,7 +22,13 @@ Leauge::Leauge(){
 }
 void Leauge::League_rand(){
     this->Leauge_bas.clear();
-    double rand_ = rand()%1;
+    double rand_;
+    if (this->Leauge_bas.at(0)->get_unique() >= 0.5)
+    {
+        rand_=0.9;
+    }else{
+        rand_=0.1;
+    }
     string name = "Gilboa Galil";
     for (size_t i = 0; i < 20; i++)
     {
@@ -40,7 +46,13 @@ void Leauge::League_both(vector<Team*> league){
             actual_group++;
         }
     }
-    double rand_ = rand()%1;
+    double rand_;
+    if (this->Leauge_bas.at(0)->get_unique() >= 0.5)
+    {
+        rand_=0.9;
+    }else{
+        rand_=0.1;
+    }
     string name = "Gilboa Galil";
     for (size_t i = actual_group; i < 20-actual_group; i++)
     {

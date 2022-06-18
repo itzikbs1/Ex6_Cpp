@@ -8,12 +8,12 @@ namespace ariel{
 class Game{
 
 private:
-    Team *home_team;
-    Team *out_team;
-    string win_team;
+    Team *home;
+    Team *out;
+    string win;
 public:
     Game();
-    Game(Team *home_team, Team *out_team);
+    Game(Team *home, Team *out);
     void play_game();
     double avg(int points1, int points2);
     double devitaion(double avg, int points1,int points2);

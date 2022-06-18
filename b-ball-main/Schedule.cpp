@@ -13,16 +13,16 @@ Schedule::Schedule(vector<Team*> teams){
     this->teams = teams;
 }
 
-vector<Game*> Schedule::Build_sch(){
-    if(this->teams.empty()){
-        throw invalid_argument("yot dont have teams for that");
-    }
-    for (size_t i = 0; i < teams.size(); i++)
+vector<Game*> Schedule::Create(){
+    int size = teams.size();
+    for (size_t i = 0; i < size; i++)
     {
-        for (size_t j = 0; j < teams.size(); j++)
+        for (size_t k = 0; k < size; k++)
         {
-            if(i!=j){
-                this->scheduale.push_back(new Game(this->teams.at(i), this->teams.at(j)));
+            if(i==k){
+                continue;
+            }else{
+                this->scheduale.push_back(new Game(this->teams.at(i), this->teams.at(k)));
             }
         }
     }

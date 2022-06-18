@@ -13,6 +13,6 @@ namespace ariel{
         public:
             Schedule();
             Schedule(vector<Team*> teams);
-            vector<Game*> Build_sch();
+            vector<Game*> Create();
     };
 }

@@ -18,9 +18,7 @@ Team::Team(){
     this->sequence_of_losses=0;
 }
 Team::Team(string name, double unique){
-    if(unique > 1 || unique < 0){
-        throw invalid_argument("invalid unique");    
-    }
+    if(unique <= 1 && unique >= 0){
     this->_name = name;
     this->unique = unique;
     this->points = 0;
@@ -29,6 +27,9 @@ Team::Team(string name, double unique){
     this->slim_difference=0;
     this->sequence_of_victories=0;
     this->sequence_of_losses=0;
+    }else{
+        throw invalid_argument("invalid unique");    
+    }
 }
 
 string Team::get_name(){
